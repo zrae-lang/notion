@@ -1,0 +1,70 @@
+<button class="button green"  type="button" onClick="onClick3()">Correct</button>
+<button class="button red" type="button" onClick="onClick4()">Incorrect</button>
+<br>
+Student achieved <span id="click3">0</span> / <span id="sum">0</span>
+<br>
+Incorrect: <span id="click4">0</span>
+
+<style>
+.button {
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 2px 2px;
+  cursor: pointer;
+  width: 100px;
+}
+
+
+.red {background-color: #ed2000;
+    border-style: solid;
+  border-color: #aa1600;} 
+
+  .orange {background-color: #ec9600;
+    border-style: solid;
+  border-color: #aa6c00;} 
+
+  .yellow {background-color: #ceed00;
+    border-style: solid;
+  border-color: #93aa00;}
+
+  .green {background-color: #56ff00;
+    border-style: solid;
+  border-color: #3eaa00;}
+
+.blue {background-color: #0085ff;
+    border-style: solid;
+  border-color: #003eaa;} 
+
+.purple {background-color: #9600ed;
+    border-style: solid;
+  border-color: #6b00aa;}
+
+.pink {background-color: #d12881;
+    border-style: solid;
+  border-color: #8e1b58;} 
+</style>
+
+<script>
+
+var click3 = 0,
+    click4 = 0;
+
+function onClick3() {
+    click3++;
+    document.getElementById("click3").innerHTML = click3;
+    calculateSum();
+}
+function onClick4() {
+    click4++;
+    document.getElementById("click4").innerHTML = click4;
+    calculateSum();
+}
+function calculateSum() {
+    document.getElementById("sum").innerHTML = click3 + click4;
+}
+</script>
